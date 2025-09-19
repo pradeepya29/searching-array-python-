@@ -1,0 +1,16 @@
+target=int(input("enter the target"))
+arr=[1,2,3,4,5]
+def binary_search(arr,target):
+    lb=0
+    ub=len(arr)-1
+    while lb<=ub:
+        mid=(lb + ub)// 2
+        if(arr[mid]== target):
+            print("element found at index",mid)
+            return
+        elif(arr[mid]<target):
+            lb=mid +1
+        else:
+            ub=mid -1
+    print("enter not found")
+binary_search(arr,target)
